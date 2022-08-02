@@ -49,7 +49,7 @@ const calculateBill = () => {
     let personTotal = Number(perPersonTotal.innerText)
     personTotal = total / numOfPeople
     // update the perPersonTotal on DOM & show it to user
-    perPersonTotal.innerText = `$${personTotal}`
+    perPersonTotal.innerText = `$${personTotal.toFixed(2)}`
   }
   
   // ** Splits the bill between more people **
@@ -59,7 +59,6 @@ const calculateBill = () => {
     // update the DOM with the new number of people
     numberOfPeople.innerText = numOfPeople
     // calculate the bill based on the new number of people
-    bill = bill / numOfPeople
     calculateBill()
   }
   
